@@ -1,0 +1,5 @@
+kubectl run voting-app-pod --image=dockersamples/vote --labels="demo-voting-app" --port=80
+kubectl run result-app-pod --image=dockersamples/result --labels="demo-voting-app" --port=80
+kubectl run worker-app-pod --image=dockersamples/worker --labels="demo-voting-app" 
+kubectl run postgres-pod --image=postgrest/postgrest --labels="app=demo-voting-app" --port=5432
+kubectl run redis-pod --image=redis --labels="app=demo-voting-app" --port=6379
